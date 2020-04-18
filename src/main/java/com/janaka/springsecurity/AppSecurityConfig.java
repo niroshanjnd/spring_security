@@ -9,22 +9,11 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 
 
 @Configuration
 @EnableWebSecurity
 public class AppSecurityConfig extends WebSecurityConfigurerAdapter{
-
-//	@Bean
-//	@Override
-//	protected UserDetailsService userDetailsService() {
-//		
-//		List<UserDetails> users = new ArrayList<>();
-//		users.add(User.withDefaultPasswordEncoder().username("jana").password("1234").roles("USER").build());
-//		
-//		return new InMemoryUserDetailsManager(users);
-//	}
 	
 	@Autowired
 	private UserDetailsService userDetailsService;
