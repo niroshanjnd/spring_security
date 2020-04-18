@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,8 +7,7 @@
 <title>Spring security home</title>
 </head>
 <body>
-	Welcome Aliens!
-	
-	<a href="logout"> Logout</a>
+	${SPRING_SECURITY_LAST_EXCEPTION.message}
+	Logout Success 
 </body>
 </html>
